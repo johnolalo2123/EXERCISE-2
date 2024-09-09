@@ -1,0 +1,32 @@
+<?php
+tasks = array();
+
+if (_SERVER["REQUEST_METHOD"] == "POST") {
+task = _POST["task"];
+
+tasks[] = task;
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PLANO KA MUNA EYYY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PLANO KA MUNA EYYY</h1>
+    <form action="" method="post">
+        <input type="text" name="task" placeholder="Enter a task">
+        <input type="submit" value="EYY KA MUNA">
+    </form>
+    <ul id="tasks">
+        <?php foreach (tasks as task) { ?>
+            <li>
+                <?php echo task; ?>
+            </li>
+        <?php } ?>
+    </ul>
+    <script src="script.js"></script>
+</body>
+</html>
